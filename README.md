@@ -1,3 +1,4 @@
+
 # Playwright TypeScript UI & API Automation Framework
 
 A maintainable end-to-end automation framework demonstrating UI/API testing, Page Object Model, fixtures, reusable utilities, tagging, reporting, and GitHub Actions CI/CD.
@@ -32,3 +33,6 @@ npm run report
 
 ## Interview Story
 The framework separates test intent from implementation using Page Objects and reusable fixtures, while the API client centralizes service interactions. GitHub Actions performs type checking and the full suite on every push/PR and uploads the Playwright report as an artifact.
+=======
+# Playwright-TypeScript-QA-Framework
+ac3ff915ea6faeb1acba0f30ca3a06616b937ab3
