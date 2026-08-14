@@ -1,0 +1,2 @@
+import {test,expect} from '@playwright/test'; import {ApiClient} from '../../utils/apiClient';
+test('@smoke POST creates a resource',async({request})=>{const p={title:'Playwright API Test',body:'Created by automated regression testing.',userId:1};const r=await new ApiClient(request).createPost(p);expect(r.status()).toBe(201);await expect(r).toBeOK();expect(await r.json()).toMatchObject({...p,id:expect.any(Number)});});

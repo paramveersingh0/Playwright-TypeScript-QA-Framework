@@ -1,0 +1,2 @@
+import {APIRequestContext,expect} from '@playwright/test';
+export class ApiClient {constructor(private readonly request:APIRequestContext,private readonly baseURL=process.env.API_BASE_URL||'https://jsonplaceholder.typicode.com'){} async getUser(id:number){const r=await this.request.get(`${this.baseURL}/users/${id}`);await expect(r).toBeOK();return r;} async createPost(payload:{title:string;body:string;userId:number}){return this.request.post(`${this.baseURL}/posts`,{data:payload});}}
