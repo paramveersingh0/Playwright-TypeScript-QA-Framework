@@ -10,6 +10,6 @@ export class CartPage {
       .filter({ hasText: name });
 
     // 2. Assert that this specific filtered locator is visible
-    await expect(productLocator).toBeVisible();
+    await expect(productLocator.first()).toBeVisible();
   }
 }
